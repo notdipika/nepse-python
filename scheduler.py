@@ -70,7 +70,6 @@ def wait_for_open():
 def run_trading_day(symbols: list[str]):
     """Run the full pipeline for one trading day."""
     from pipeline import stage_extract, stage_transform, stage_load, stage_report
-    import pandas as pd
 
     log.info("=" * 60)
     log.info(f"TRADING DAY  {now_npt().strftime('%a %d %b %Y')}")

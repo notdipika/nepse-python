@@ -3,6 +3,7 @@ config.py  ─  NEPSE ETL Project Configuration
 """
 import os
 from pathlib import Path
+from datetime import datetime
 from zoneinfo import ZoneInfo
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
@@ -13,6 +14,24 @@ REPORTS_DIR  = BASE_DIR / "reports"
 
 RAW_CSV      = DATA_DIR / "raw.csv"
 CLEANED_CSV  = DATA_DIR / "cleaned.csv"
+
+def get_session_dirs(date_str: str | None = None) -> tuple[Path, Path]:
+    """
+    Returns (graphs_dir, reports_dir) for a given date string (YYYY-MM-DD).
+    Creates subdirs under  reports/YYYY-MM-DD/graphs/  and  reports/YYYY-MM-DD/
+    """
+    if date_str is None:
+        date_str = datetime.now(NPT).strftime("%Y-%m-%d")
+    session_dir  = BASE_DIR / "reports" / date_str
+    graphs_dir   = session_dir / "graphs"
+    session_dir.mkdir(parents=True, exist_ok=True)
+    graphs_dir.mkdir(parents=True, exist_ok=True)
+    return graphs_dir, session_dir
+
+
+def today_dirs() -> tuple[Path, Path]:
+    return get_session_dirs()
+
 
 for d in (DATA_DIR, LOGS_DIR, REPORTS_DIR):
     d.mkdir(exist_ok=True)

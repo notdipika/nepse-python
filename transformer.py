@@ -1,6 +1,9 @@
 """
 transformer.py  ─  Stage 2: Transform & Enrich
 Reads data/raw.csv → cleans → enriches → saves data/cleaned.csv
+
+v2: Passes through ma5/ma10/ma20 from extractor; also computes
+    EMA-style moving averages from the cleaned close series.
 """
 import pandas as pd
 import numpy as np
@@ -17,13 +20,6 @@ class DataCleaningPipeline:
     def __init__(self, df: pd.DataFrame):
         self.df = df.copy()
         self._steps: list[tuple[str, callable]] = []
-
-    def register(self, name: str):
-        """Decorator to register a transform step."""
-        def decorator(fn):
-            self._steps.append((name, fn))
-            return fn
-        return decorator
 
     @staticmethod
     def _validate_step(df: pd.DataFrame, step_name: str) -> None:
@@ -55,8 +51,10 @@ def transform(raw_path: Path = RAW_CSV,
     def coerce_types(df):
         df["fetched_at"] = pd.to_datetime(df["fetched_at"], errors="coerce")
         df["date"]       = pd.to_datetime(df["date"],       errors="coerce")
-        for col in ("open", "high", "low", "close", "prev_close", "pct_change"):
-            df[col] = pd.to_numeric(df[col], errors="coerce")
+        for col in ("open", "high", "low", "close", "prev_close", "pct_change",
+                    "ma5", "ma10", "ma20"):
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors="coerce")
         df["volume"] = pd.to_numeric(df["volume"], errors="coerce").fillna(0).astype(int)
         return df
     pipeline._steps.append(("coerce_types", coerce_types))
@@ -91,13 +89,10 @@ def transform(raw_path: Path = RAW_CSV,
         return df
     pipeline._steps.append(("sanity_checks", sanity_checks))
 
-    # ─── Step 5: Derive prev_close via sorted walk (O(n) not O(n²)) ──────────
+    # ─── Step 5: Derive prev_close ────────────────────────────────────────────
     def derive_prev_close(df):
         df = df.sort_values(["symbol", "fetched_at"]).reset_index(drop=True)
-        df["prev_close_derived"] = (
-            df.groupby("symbol")["close"].shift(1)
-        )
-        # Fill with API-provided prev_close where derived is null
+        df["prev_close_derived"] = df.groupby("symbol")["close"].shift(1)
         mask = df["prev_close_derived"].isna()
         df.loc[mask, "prev_close_derived"] = df.loc[mask, "prev_close"]
         return df
@@ -105,41 +100,45 @@ def transform(raw_path: Path = RAW_CSV,
 
     # ─── Step 6: Feature engineering ─────────────────────────────────────────
     def feature_engineering(df):
-        # Recalculate pct_change from derived prev_close (more accurate)
         df["pct_change_calc"] = np.where(
             df["prev_close_derived"] > 0,
             (df["close"] - df["prev_close_derived"]) / df["prev_close_derived"] * 100,
             df["pct_change"],
         ).round(2)
 
-        # Price range
-        df["range"]          = (df["high"] - df["low"]).round(2)
-        df["range_pct"]      = (df["range"] / df["low"] * 100).round(2)
+        df["range"]        = (df["high"] - df["low"]).round(2)
+        df["range_pct"]    = (df["range"] / df["low"] * 100).round(2)
+        df["body"]         = (df["close"] - df["open"]).round(2)
+        df["upper_shadow"] = (df["high"] - df[["open", "close"]].max(axis=1)).round(2)
+        df["lower_shadow"] = (df[["open", "close"]].min(axis=1) - df["low"]).round(2)
+        df["direction"]    = np.where(df["close"] >= df["open"], "UP", "DOWN")
 
-        # Body and shadow (candlestick components)
-        df["body"]           = (df["close"] - df["open"]).round(2)
-        df["upper_shadow"]   = (df["high"] - df[["open", "close"]].max(axis=1)).round(2)
-        df["lower_shadow"]   = (df[["open", "close"]].min(axis=1) - df["low"]).round(2)
-
-        # Direction
-        df["direction"] = np.where(df["close"] >= df["open"], "UP", "DOWN")
-
-        # Scaled close (min-max per symbol)
         df["close_scaled"] = (
             df.groupby("symbol")["close"]
               .transform(lambda x: (x - x.min()) / (x.max() - x.min() + 1e-9))
               .round(4)
         )
 
-        # Cumulative return per symbol
         df["cum_return_pct"] = (
             df.groupby("symbol")["pct_change_calc"]
               .transform(lambda x: x.cumsum())
               .round(2)
         )
 
-        # Hour of fetch
         df["fetch_hour"] = df["fetched_at"].dt.hour
+
+        # ── Recompute MAs from clean sorted close values ──────────────────────
+        # Fills gaps where extractor couldn't compute MA (not enough polls yet)
+        for n, col in [(5, "ma5"), (10, "ma10"), (20, "ma20")]:
+            computed = (
+                df.groupby("symbol")["close"]
+                  .transform(lambda x: x.ewm(span=n, adjust=False).mean().round(2))
+            )
+            if col not in df.columns:
+                df[col] = computed
+            else:
+                # Prefer extractor value; fill NaN with computed
+                df[col] = df[col].fillna(computed)
 
         return df
     pipeline._steps.append(("feature_engineering", feature_engineering))
@@ -153,8 +152,6 @@ def transform(raw_path: Path = RAW_CSV,
 
     # ─── Run pipeline ─────────────────────────────────────────────────────────
     cleaned = pipeline.run()
-
-    # Sort output
     cleaned = cleaned.sort_values(["symbol", "fetched_at"]).reset_index(drop=True)
 
     cleaned.to_csv(out_path, index=False)
