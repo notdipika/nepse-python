@@ -1,0 +1,90 @@
+2026-03-25 09:47:28 | INFO     | pipeline | DEMO MODE — generating synthetic data …
+2026-03-25 09:47:29 | INFO     | pipeline | Demo data written: 100 rows to /home/claude/NEPSE_ETL_PROJECT/data/raw.csv
+2026-03-25 09:47:29 | INFO     | pipeline | NEPSE ETL Pipeline starting …
+2026-03-25 09:47:29 | INFO     | pipeline | Symbols: ['NEPSE', 'NABIL', 'ADBL', 'NTC', 'NICA', 'UPPER', 'SCB', 'EBL', 'SBL', 'GBIME']
+2026-03-25 09:47:29 | INFO     | pipeline | ============================================================
+2026-03-25 09:47:29 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-25 09:47:29 | INFO     | pipeline | ============================================================
+2026-03-25 09:47:29 | INFO     | transformer | Loaded raw.csv: 100 rows, 10 symbols
+2026-03-25 09:47:29 | INFO     | transformer | Running transform step: coerce_types
+2026-03-25 09:47:29 | DEBUG    | transformer | [validate] coerce_types → 100 rows OK
+2026-03-25 09:47:29 | INFO     | transformer | Running transform step: drop_duplicates
+2026-03-25 09:47:29 | INFO     | transformer | drop_duplicates: removed 0 rows
+2026-03-25 09:47:29 | DEBUG    | transformer | [validate] drop_duplicates → 100 rows OK
+2026-03-25 09:47:29 | INFO     | transformer | Running transform step: drop_null_ohlcv
+2026-03-25 09:47:29 | INFO     | transformer | drop_null_ohlcv: removed 0 rows
+2026-03-25 09:47:29 | DEBUG    | transformer | [validate] drop_null_ohlcv → 100 rows OK
+2026-03-25 09:47:29 | INFO     | transformer | Running transform step: sanity_checks
+2026-03-25 09:47:29 | INFO     | transformer | sanity_checks: removed 0 invalid rows
+2026-03-25 09:47:29 | DEBUG    | transformer | [validate] sanity_checks → 100 rows OK
+2026-03-25 09:47:29 | INFO     | transformer | Running transform step: derive_prev_close
+2026-03-25 09:47:29 | DEBUG    | transformer | [validate] derive_prev_close → 100 rows OK
+2026-03-25 09:47:29 | INFO     | transformer | Running transform step: feature_engineering
+2026-03-25 09:47:29 | DEBUG    | transformer | [validate] feature_engineering → 100 rows OK
+2026-03-25 09:47:29 | INFO     | transformer | Running transform step: fill_nulls
+2026-03-25 09:47:29 | DEBUG    | transformer | [validate] fill_nulls → 100 rows OK
+2026-03-25 09:47:29 | INFO     | transformer | Saved cleaned.csv: 100 rows → /home/claude/NEPSE_ETL_PROJECT/data/cleaned.csv
+2026-03-25 09:47:29 | INFO     | pipeline | ============================================================
+2026-03-25 09:47:29 | INFO     | pipeline | STAGE 3 & 4: LOAD + VISUALISE
+2026-03-25 09:47:29 | INFO     | pipeline | ============================================================
+2026-03-25 09:47:32 | INFO     | loader | Saved: 01_close_price_lines.png
+2026-03-25 09:47:32 | INFO     | loader | Saved: 02_pct_change_bars.png
+2026-03-25 09:47:33 | INFO     | loader | Saved: 03_candlestick.png
+2026-03-25 09:47:33 | INFO     | loader | Saved: 04_volume_bars.png
+2026-03-25 09:47:34 | INFO     | loader | Saved: 05_correlation_heatmap.png
+2026-03-25 09:47:34 | INFO     | loader | Saved: 06_cumulative_return.png
+2026-03-25 09:47:34 | INFO     | loader | Saved: 07_summary_table.png
+2026-03-25 09:47:35 | INFO     | loader | Saved: 08_nepse_index.png
+2026-03-25 09:47:35 | INFO     | pipeline | ============================================================
+2026-03-25 09:47:35 | INFO     | pipeline | STAGE 5: REPORT
+2026-03-25 09:47:35 | INFO     | pipeline | ============================================================
+2026-03-25 09:47:36 | INFO     | report_generator | PDF report saved: /home/claude/NEPSE_ETL_PROJECT/reports/NEPSE_Report_20260325_094735.pdf
+2026-03-25 09:47:36 | INFO     | pipeline | Report saved: /home/claude/NEPSE_ETL_PROJECT/reports/NEPSE_Report_20260325_094735.pdf
+2026-03-25 09:47:36 | INFO     | pipeline | Pipeline complete.
+2026-03-25 15:47:06 | INFO     | pipeline | NEPSE ETL Pipeline starting …
+2026-03-25 15:47:06 | INFO     | pipeline | Symbols: ['NEPSE', 'NABIL', 'ADBL', 'NTC', 'NICA', 'UPPER', 'SCB', 'EBL', 'SBL', 'GBIME']
+2026-03-25 15:47:06 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:06 | INFO     | pipeline | STAGE 1: EXTRACT
+2026-03-25 15:47:06 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:06 | INFO     | extractor | Extractor started. Watchlist: ['NEPSE', 'NABIL', 'ADBL', 'NTC', 'NICA', 'UPPER', 'SCB', 'EBL', 'SBL', 'GBIME']
+2026-03-25 15:47:06 | INFO     | extractor | Market closed for today. Exiting extractor loop.
+2026-03-25 15:47:06 | INFO     | extractor | Extractor finished.
+2026-03-25 15:47:06 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:06 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-25 15:47:06 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:07 | INFO     | transformer | Loaded raw.csv: 20 rows, 5 symbols
+2026-03-25 15:47:07 | INFO     | transformer | Running transform step: coerce_types
+2026-03-25 15:47:07 | DEBUG    | transformer | [validate] coerce_types → 20 rows OK
+2026-03-25 15:47:07 | INFO     | transformer | Running transform step: drop_duplicates
+2026-03-25 15:47:07 | INFO     | transformer | drop_duplicates: removed 0 rows
+2026-03-25 15:47:07 | DEBUG    | transformer | [validate] drop_duplicates → 20 rows OK
+2026-03-25 15:47:07 | INFO     | transformer | Running transform step: drop_null_ohlcv
+2026-03-25 15:47:07 | INFO     | transformer | drop_null_ohlcv: removed 0 rows
+2026-03-25 15:47:07 | DEBUG    | transformer | [validate] drop_null_ohlcv → 20 rows OK
+2026-03-25 15:47:07 | INFO     | transformer | Running transform step: sanity_checks
+2026-03-25 15:47:07 | INFO     | transformer | sanity_checks: removed 0 invalid rows
+2026-03-25 15:47:07 | DEBUG    | transformer | [validate] sanity_checks → 20 rows OK
+2026-03-25 15:47:07 | INFO     | transformer | Running transform step: derive_prev_close
+2026-03-25 15:47:07 | DEBUG    | transformer | [validate] derive_prev_close → 20 rows OK
+2026-03-25 15:47:07 | INFO     | transformer | Running transform step: feature_engineering
+2026-03-25 15:47:07 | DEBUG    | transformer | [validate] feature_engineering → 20 rows OK
+2026-03-25 15:47:07 | INFO     | transformer | Running transform step: fill_nulls
+2026-03-25 15:47:07 | DEBUG    | transformer | [validate] fill_nulls → 20 rows OK
+2026-03-25 15:47:07 | INFO     | transformer | Saved cleaned.csv: 20 rows → /home/riyospace/Documents/NEPSE_ETL_PROJECT/data/cleaned.csv
+2026-03-25 15:47:07 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:07 | INFO     | pipeline | STAGE 3 & 4: LOAD + VISUALISE
+2026-03-25 15:47:07 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:08 | INFO     | loader | Saved: 01_close_price_lines.png
+2026-03-25 15:47:08 | INFO     | loader | Saved: 02_pct_change_bars.png
+2026-03-25 15:47:08 | INFO     | loader | Saved: 03_candlestick.png
+2026-03-25 15:47:08 | INFO     | loader | Saved: 04_volume_bars.png
+2026-03-25 15:47:08 | INFO     | loader | Saved: 05_correlation_heatmap.png
+2026-03-25 15:47:08 | INFO     | loader | Saved: 06_cumulative_return.png
+2026-03-25 15:47:08 | INFO     | loader | Saved: 07_summary_table.png
+2026-03-25 15:47:08 | WARNING  | loader | No NEPSE index data — skipping index chart
+2026-03-25 15:47:08 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:08 | INFO     | pipeline | STAGE 5: REPORT
+2026-03-25 15:47:08 | INFO     | pipeline | ============================================================
+2026-03-25 15:47:09 | INFO     | report_generator | PDF report saved: /home/riyospace/Documents/NEPSE_ETL_PROJECT/reports/NEPSE_Report_20260325_154709.pdf
+2026-03-25 15:47:09 | INFO     | pipeline | Report saved: /home/riyospace/Documents/NEPSE_ETL_PROJECT/reports/NEPSE_Report_20260325_154709.pdf
+2026-03-25 15:47:09 | INFO     | pipeline | Pipeline complete.
