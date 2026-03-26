@@ -23,6 +23,10 @@ Usage
   python pipeline.py --email a@x.com b@x.com  # override email recipients
   python pipeline.py --cc mgr@x.com           # add CC recipients
 """
+
+from dotenv import load_dotenv
+load_dotenv()
+
 import sys
 import argparse
 from pathlib import Path

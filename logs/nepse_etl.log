@@ -376,3 +376,484 @@
 2026-03-26 07:42:03 | ERROR    | notifier | Auth failed — use a Gmail App Password, not your main password.
 2026-03-26 07:42:03 | INFO     | report | Email not sent — check config.
 2026-03-26 07:42:03 | INFO     | pipeline | Report ready: /home/riyospace/Documents/new_optimized2/new_optimized/reports/2026-03-26/NEPSE_Report_20260326_074158.pdf
+2026-03-26 09:31:18 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 09:31:19 | INFO     | pipeline | ============================================================
+2026-03-26 09:31:19 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 09:31:19 | INFO     | pipeline | ============================================================
+2026-03-26 09:31:19 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 09:31:19 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 09:31:19 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 09:31:19 | INFO     | pipeline | ============================================================
+2026-03-26 09:31:19 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 09:31:19 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:04 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 09:33:05 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:05 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 09:33:05 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:05 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 09:33:05 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 09:33:05 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 09:33:05 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:05 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 09:33:05 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:18 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 09:33:18 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:18 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 09:33:18 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:18 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 09:33:18 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 09:33:18 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 09:33:18 | INFO     | pipeline | ============================================================
+2026-03-26 09:33:18 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 09:33:18 | INFO     | pipeline | ============================================================
+2026-03-26 09:36:26 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 09:36:26 | INFO     | pipeline | ============================================================
+2026-03-26 09:36:26 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 09:36:26 | INFO     | pipeline | ============================================================
+2026-03-26 09:36:26 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 09:36:26 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 09:36:26 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 09:36:26 | INFO     | pipeline | ============================================================
+2026-03-26 09:36:26 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 09:36:26 | INFO     | pipeline | ============================================================
+2026-03-26 09:38:09 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 09:38:09 | INFO     | pipeline | ============================================================
+2026-03-26 09:38:09 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 09:38:09 | INFO     | pipeline | ============================================================
+2026-03-26 09:38:09 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 09:38:09 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 09:38:09 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 09:38:09 | INFO     | pipeline | ============================================================
+2026-03-26 09:38:09 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 09:38:09 | INFO     | pipeline | ============================================================
+2026-03-26 10:50:26 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 10:50:26 | INFO     | pipeline | ============================================================
+2026-03-26 10:50:26 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 10:50:26 | INFO     | pipeline | ============================================================
+2026-03-26 10:50:26 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 10:50:26 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 10:50:26 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 10:50:26 | INFO     | pipeline | ============================================================
+2026-03-26 10:50:26 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 10:50:26 | INFO     | pipeline | ============================================================
+2026-03-26 15:53:03 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 15:53:03 | INFO     | pipeline | ============================================================
+2026-03-26 15:53:03 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 15:53:03 | INFO     | pipeline | ============================================================
+2026-03-26 15:53:03 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 15:53:03 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 15:53:03 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 15:53:03 | INFO     | pipeline | ============================================================
+2026-03-26 15:53:03 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 15:53:03 | INFO     | pipeline | ============================================================
+2026-03-26 15:53:03 | INFO     | pipeline | ============================================================
+2026-03-26 15:53:03 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 15:53:03 | INFO     | pipeline | ============================================================
+2026-03-26 15:53:05 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-25/NEPSE_Report_20260326_155303.pdf
+2026-03-26 15:54:12 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 15:54:13 | INFO     | pipeline | ============================================================
+2026-03-26 15:54:13 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 15:54:13 | INFO     | pipeline | ============================================================
+2026-03-26 15:54:13 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 15:54:13 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 15:54:13 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 15:54:13 | INFO     | pipeline | ============================================================
+2026-03-26 15:54:13 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 15:54:13 | INFO     | pipeline | ============================================================
+2026-03-26 15:54:13 | INFO     | pipeline | ============================================================
+2026-03-26 15:54:13 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 15:54:13 | INFO     | pipeline | ============================================================
+2026-03-26 15:54:14 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-25/NEPSE_Report_20260326_155413.pdf
+2026-03-26 17:44:32 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 17:44:32 | INFO     | pipeline | ============================================================
+2026-03-26 17:44:32 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 17:44:32 | INFO     | pipeline | ============================================================
+2026-03-26 17:44:32 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 17:44:32 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 17:44:32 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 17:44:32 | INFO     | pipeline | ============================================================
+2026-03-26 17:44:32 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 17:44:32 | INFO     | pipeline | ============================================================
+2026-03-26 17:44:32 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 17:44:32 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 17:44:34 | INFO     | report | All charts generated.
+2026-03-26 17:44:34 | INFO     | pipeline | ============================================================
+2026-03-26 17:44:34 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 17:44:34 | INFO     | pipeline | ============================================================
+2026-03-26 17:44:34 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 17:44:34 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 17:44:34 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_174434.pdf
+2026-03-26 17:44:35 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_174434.pdf
+2026-03-26 17:44:35 | INFO     | report | Desktop notification dispatched.
+2026-03-26 17:44:35 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 17:44:41 | ERROR    | notifier | Auth failed — use a Gmail App Password, not your main password.
+2026-03-26 17:44:41 | WARNING  | report | Email not sent — check NEPSE_EMAIL_* env vars or logs.
+2026-03-26 17:44:41 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_174434.pdf
+2026-03-26 18:04:15 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:04:15 | INFO     | pipeline | ============================================================
+2026-03-26 18:04:15 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:04:15 | INFO     | pipeline | ============================================================
+2026-03-26 18:04:15 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:04:15 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:04:15 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:04:15 | INFO     | pipeline | ============================================================
+2026-03-26 18:04:15 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:04:15 | INFO     | pipeline | ============================================================
+2026-03-26 18:04:15 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:04:15 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:04:17 | INFO     | report | All charts generated.
+2026-03-26 18:04:17 | INFO     | pipeline | ============================================================
+2026-03-26 18:04:17 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:04:17 | INFO     | pipeline | ============================================================
+2026-03-26 18:04:17 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:04:17 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:04:17 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_180417.pdf
+2026-03-26 18:04:18 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_180417.pdf
+2026-03-26 18:04:18 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:04:18 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:04:33 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:04:54 | INFO     | notifier | Email sent.
+2026-03-26 18:04:54 | INFO     | report | Email sent successfully.
+2026-03-26 18:04:54 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_180417.pdf
+2026-03-26 18:08:34 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:08:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:08:35 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:08:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:08:35 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:08:35 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:08:35 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:08:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:08:35 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:08:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:08:36 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:08:36 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:08:39 | INFO     | report | All charts generated.
+2026-03-26 18:08:39 | INFO     | pipeline | ============================================================
+2026-03-26 18:08:39 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:08:39 | INFO     | pipeline | ============================================================
+2026-03-26 18:08:39 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:08:39 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:08:39 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_180839.pdf
+2026-03-26 18:08:45 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_180839.pdf
+2026-03-26 18:08:45 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:08:45 | INFO     | notifier | Sending email to recipient@example.com …
+2026-03-26 18:08:48 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:08:48 | ERROR    | notifier | Auth failed — use a Gmail App Password, not your main password.
+2026-03-26 18:08:48 | WARNING  | report | Email not sent — check NEPSE_EMAIL_* env vars or logs.
+2026-03-26 18:08:48 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_180839.pdf
+2026-03-26 18:10:02 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:10:03 | INFO     | pipeline | ============================================================
+2026-03-26 18:10:03 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:10:03 | INFO     | pipeline | ============================================================
+2026-03-26 18:10:03 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:10:03 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:10:03 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:10:03 | INFO     | pipeline | ============================================================
+2026-03-26 18:10:03 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:10:03 | INFO     | pipeline | ============================================================
+2026-03-26 18:16:35 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:16:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:16:35 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:16:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:16:35 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:16:35 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:16:35 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:16:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:16:35 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:16:35 | INFO     | pipeline | ============================================================
+2026-03-26 18:16:35 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:16:35 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:16:37 | INFO     | report | All charts generated.
+2026-03-26 18:16:37 | INFO     | pipeline | ============================================================
+2026-03-26 18:16:37 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:16:37 | INFO     | pipeline | ============================================================
+2026-03-26 18:16:37 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:16:37 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:16:37 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_181637.pdf
+2026-03-26 18:16:38 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_181637.pdf
+2026-03-26 18:16:38 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:16:38 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:16:45 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:17:10 | INFO     | notifier | Email sent.
+2026-03-26 18:17:10 | INFO     | report | Email sent successfully.
+2026-03-26 18:17:10 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_181637.pdf
+2026-03-26 18:19:39 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:19:39 | INFO     | pipeline | ============================================================
+2026-03-26 18:19:39 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:19:39 | INFO     | pipeline | ============================================================
+2026-03-26 18:19:39 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:19:39 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:19:39 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:19:39 | INFO     | pipeline | ============================================================
+2026-03-26 18:19:39 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:19:39 | INFO     | pipeline | ============================================================
+2026-03-26 18:19:40 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:19:40 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:19:41 | INFO     | report | All charts generated.
+2026-03-26 18:19:41 | INFO     | pipeline | ============================================================
+2026-03-26 18:19:41 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:19:41 | INFO     | pipeline | ============================================================
+2026-03-26 18:19:41 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:19:41 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:19:41 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_181941.pdf
+2026-03-26 18:19:42 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_181941.pdf
+2026-03-26 18:19:42 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:28:48 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:28:48 | INFO     | pipeline | ============================================================
+2026-03-26 18:28:48 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:28:48 | INFO     | pipeline | ============================================================
+2026-03-26 18:28:48 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:28:48 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:28:48 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:28:48 | INFO     | pipeline | ============================================================
+2026-03-26 18:28:48 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:28:48 | INFO     | pipeline | ============================================================
+2026-03-26 18:28:49 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:28:49 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:28:50 | INFO     | report | All charts generated.
+2026-03-26 18:28:50 | INFO     | pipeline | ============================================================
+2026-03-26 18:28:50 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:28:50 | INFO     | pipeline | ============================================================
+2026-03-26 18:28:50 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:28:50 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:28:50 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_182850.pdf
+2026-03-26 18:28:51 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_182850.pdf
+2026-03-26 18:28:51 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:28:51 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:29:07 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:29:25 | ERROR    | notifier | Email failed: Server not connected
+Traceback (most recent call last):
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 360, in send
+    self.sock.sendall(s)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1270, in sendall
+    v = self.send(byte_view[count:])
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1239, in send
+    return self._sslobj.write(data)
+TimeoutError: The write operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/riyospace/Documents/NEPSE-PYTHON/notifier.py", line 204, in send_report
+    s.sendmail(EMAIL_SENDER, to_list + cc_list, msg.as_string())
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 902, in sendmail
+    (code, resp) = self.data(msg)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 579, in data
+    self.send(q)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('Server not connected')
+smtplib.SMTPServerDisconnected: Server not connected
+2026-03-26 18:29:25 | WARNING  | report | Email not sent — check NEPSE_EMAIL_* env vars or logs.
+2026-03-26 18:29:25 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_182850.pdf
+2026-03-26 18:30:50 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:30:50 | INFO     | pipeline | ============================================================
+2026-03-26 18:30:50 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:30:50 | INFO     | pipeline | ============================================================
+2026-03-26 18:30:50 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:30:50 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:30:50 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:30:50 | INFO     | pipeline | ============================================================
+2026-03-26 18:30:50 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:30:50 | INFO     | pipeline | ============================================================
+2026-03-26 18:30:51 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:30:51 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:30:52 | INFO     | report | All charts generated.
+2026-03-26 18:30:52 | INFO     | pipeline | ============================================================
+2026-03-26 18:30:52 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:30:52 | INFO     | pipeline | ============================================================
+2026-03-26 18:30:52 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:30:52 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:30:52 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183052.pdf
+2026-03-26 18:30:53 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183052.pdf
+2026-03-26 18:30:53 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:30:53 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:31:01 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:31:27 | ERROR    | notifier | Email failed: Server not connected
+Traceback (most recent call last):
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 360, in send
+    self.sock.sendall(s)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1270, in sendall
+    v = self.send(byte_view[count:])
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1239, in send
+    return self._sslobj.write(data)
+TimeoutError: The write operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/riyospace/Documents/NEPSE-PYTHON/notifier.py", line 204, in send_report
+    s.sendmail(EMAIL_SENDER, to_list + cc_list, msg.as_string())
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 902, in sendmail
+    (code, resp) = self.data(msg)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 579, in data
+    self.send(q)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('Server not connected')
+smtplib.SMTPServerDisconnected: Server not connected
+2026-03-26 18:31:27 | WARNING  | report | Email not sent — check NEPSE_EMAIL_* env vars or logs.
+2026-03-26 18:31:27 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183052.pdf
+2026-03-26 18:35:12 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:35:12 | INFO     | pipeline | ============================================================
+2026-03-26 18:35:12 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:35:12 | INFO     | pipeline | ============================================================
+2026-03-26 18:35:12 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:35:12 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:35:12 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:35:12 | INFO     | pipeline | ============================================================
+2026-03-26 18:35:12 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:35:12 | INFO     | pipeline | ============================================================
+2026-03-26 18:35:12 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:35:12 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:35:13 | INFO     | report | All charts generated.
+2026-03-26 18:35:13 | INFO     | pipeline | ============================================================
+2026-03-26 18:35:13 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:35:13 | INFO     | pipeline | ============================================================
+2026-03-26 18:35:13 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:35:13 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:35:13 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183513.pdf
+2026-03-26 18:35:15 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183513.pdf
+2026-03-26 18:35:15 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:35:15 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:35:30 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:36:00 | ERROR    | notifier | Email failed: Server not connected
+Traceback (most recent call last):
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 360, in send
+    self.sock.sendall(s)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1270, in sendall
+    v = self.send(byte_view[count:])
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1239, in send
+    return self._sslobj.write(data)
+TimeoutError: The write operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/riyospace/Documents/NEPSE-PYTHON/notifier.py", line 204, in send_report
+    s.sendmail(EMAIL_SENDER, to_list + cc_list, msg.as_string())
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 902, in sendmail
+    (code, resp) = self.data(msg)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 579, in data
+    self.send(q)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('Server not connected')
+smtplib.SMTPServerDisconnected: Server not connected
+2026-03-26 18:36:00 | WARNING  | report | Email not sent — check NEPSE_EMAIL_* env vars or logs.
+2026-03-26 18:36:00 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183513.pdf
+2026-03-26 18:37:51 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:37:51 | INFO     | pipeline | ============================================================
+2026-03-26 18:37:51 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:37:51 | INFO     | pipeline | ============================================================
+2026-03-26 18:37:51 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:37:51 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:37:51 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:37:51 | INFO     | pipeline | ============================================================
+2026-03-26 18:37:51 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:37:51 | INFO     | pipeline | ============================================================
+2026-03-26 18:37:52 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:37:52 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:37:53 | INFO     | report | All charts generated.
+2026-03-26 18:37:53 | INFO     | pipeline | ============================================================
+2026-03-26 18:37:53 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:37:53 | INFO     | pipeline | ============================================================
+2026-03-26 18:37:53 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:37:53 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:37:53 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183753.pdf
+2026-03-26 18:37:54 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183753.pdf
+2026-03-26 18:37:54 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:37:54 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:38:09 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:38:33 | ERROR    | notifier | Email failed: Server not connected
+Traceback (most recent call last):
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 360, in send
+    self.sock.sendall(s)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1270, in sendall
+    v = self.send(byte_view[count:])
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1239, in send
+    return self._sslobj.write(data)
+TimeoutError: The write operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/riyospace/Documents/NEPSE-PYTHON/notifier.py", line 204, in send_report
+    s.sendmail(EMAIL_SENDER, to_list + cc_list, msg.as_string())
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 902, in sendmail
+    (code, resp) = self.data(msg)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 579, in data
+    self.send(q)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('Server not connected')
+smtplib.SMTPServerDisconnected: Server not connected
+2026-03-26 18:38:33 | WARNING  | report | Email not sent — check NEPSE_EMAIL_* env vars or logs.
+2026-03-26 18:38:33 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_183753.pdf
+2026-03-26 18:42:01 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:42:01 | INFO     | pipeline | ============================================================
+2026-03-26 18:42:01 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:42:01 | INFO     | pipeline | ============================================================
+2026-03-26 18:42:01 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:42:01 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:42:01 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:42:01 | INFO     | pipeline | ============================================================
+2026-03-26 18:42:01 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:42:01 | INFO     | pipeline | ============================================================
+2026-03-26 18:42:01 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:42:01 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:42:02 | INFO     | report | All charts generated.
+2026-03-26 18:42:02 | INFO     | pipeline | ============================================================
+2026-03-26 18:42:02 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:42:02 | INFO     | pipeline | ============================================================
+2026-03-26 18:42:02 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:42:02 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:42:02 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_184202.pdf
+2026-03-26 18:42:04 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_184202.pdf
+2026-03-26 18:42:04 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:42:04 | INFO     | notifier | Connecting to SMTP server smtp.gmail.com:587 …
+2026-03-26 18:42:04 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:42:10 | ERROR    | notifier | Email failed: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1017)
+Traceback (most recent call last):
+  File "/home/riyospace/Documents/NEPSE-PYTHON/notifier.py", line 204, in send_report
+    with smtplib.SMTP_SSL(
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 1050, in __init__
+    SMTP.__init__(self, host, port, local_hostname, timeout,
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/smtplib.py", line 1057, in _get_socket
+    new_socket = self.context.wrap_socket(new_socket,
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/home/riyospace/miniconda3/envs/ai/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1017)
+2026-03-26 18:42:10 | WARNING  | report | Email not sent — check NEPSE_EMAIL_* env vars or logs.
+2026-03-26 18:42:10 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_184202.pdf
+2026-03-26 18:44:40 | INFO     | pipeline | Generating report from current raw.csv data …
+2026-03-26 18:44:41 | INFO     | pipeline | ============================================================
+2026-03-26 18:44:41 | INFO     | pipeline | STAGE 2: TRANSFORM
+2026-03-26 18:44:41 | INFO     | pipeline | ============================================================
+2026-03-26 18:44:41 | INFO     | transformer | Loaded 600 rows, 10 symbol(s)
+2026-03-26 18:44:41 | INFO     | transformer | Removed 0 duplicate rows
+2026-03-26 18:44:41 | INFO     | transformer | Saved 402 rows → /home/riyospace/Documents/NEPSE-PYTHON/data/cleaned.csv
+2026-03-26 18:44:41 | INFO     | pipeline | ============================================================
+2026-03-26 18:44:41 | INFO     | pipeline | STAGE 3: VISUALISE
+2026-03-26 18:44:41 | INFO     | pipeline | ============================================================
+2026-03-26 18:44:41 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:44:41 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:44:42 | INFO     | report | All charts generated.
+2026-03-26 18:44:42 | INFO     | pipeline | ============================================================
+2026-03-26 18:44:42 | INFO     | pipeline | STAGE 4: REPORT + NOTIFY + EMAIL
+2026-03-26 18:44:42 | INFO     | pipeline | ============================================================
+2026-03-26 18:44:42 | INFO     | report | df_hist loaded: 402 rows, 10 symbol(s)
+2026-03-26 18:44:42 | INFO     | report | TODAY_DATA built: ['ADBL', 'NABIL', 'NICA', 'NTC', 'SCB', 'NEPSE', 'UPPER', 'EBL', 'SBL', 'GBIME']
+2026-03-26 18:44:42 | INFO     | report | Assembling PDF → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_184442.pdf
+2026-03-26 18:44:44 | INFO     | report | PDF saved → /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_184442.pdf
+2026-03-26 18:44:44 | INFO     | report | Desktop notification dispatched.
+2026-03-26 18:44:44 | INFO     | notifier | Connecting to SMTP server smtp.gmail.com:587 …
+2026-03-26 18:44:44 | INFO     | notifier | Sending email to chaudhary.dipika17@gmail.com …
+2026-03-26 18:44:59 | INFO     | notifier | Desktop notification sent.
+2026-03-26 18:45:19 | INFO     | notifier | Email sent successfully.
+2026-03-26 18:45:19 | INFO     | report | Email sent successfully.
+2026-03-26 18:45:19 | INFO     | pipeline | Report ready: /home/riyospace/Documents/NEPSE-PYTHON/reports/2026-03-26/NEPSE_Report_20260326_184442.pdf

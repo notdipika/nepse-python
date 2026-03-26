@@ -5,11 +5,6 @@ Notifications: notify-send with "Open PDF" button → opens in Brave.
                Falls back to zenity dialog if notify-send is missing.
 Email:         Gmail SMTP/TLS with HTML + PDF attachment.
 
-Setup (one-time):
-    export NEPSE_EMAIL_SENDER=you@gmail.com
-    export NEPSE_EMAIL_PASSWORD=xxxx_xxxx_xxxx_xxxx   # Gmail App Password
-    export NEPSE_EMAIL_RECIPIENTS=a@gmail.com,b@gmail.com
-    export NEPSE_EMAIL_ENABLED=true
 """
 
 import ssl, smtplib, socket, subprocess, threading
@@ -28,7 +23,6 @@ from config import (
 from logger import get_logger
 
 log = get_logger("notifier")
-
 
 # ── Desktop notification ───────────────────────────────────────────────────────
 
@@ -98,84 +92,71 @@ def notify_async(title: str, body: str, pdf_path: str | Path | None = None):
 # ── Email ──────────────────────────────────────────────────────────────────────
 
 def _html_body(pdf_path: Path, summary: dict | None) -> str:
-    today    = datetime.now(NPT).strftime("%A, %d %B %Y")
+    today = datetime.now(NPT).strftime("%A, %d %B %Y")
     gen_time = datetime.now(NPT).strftime("%H:%M NPT")
-    size     = f"{pdf_path.stat().st_size/1024:.1f} KB" if pdf_path.exists() else "—"
 
-    kpi_rows = ""
-    if summary:
-        for label, value in [
-            ("Symbols Tracked",  str(summary.get("n_symbols", "—"))),
-            ("Total Volume",     f"{summary.get('total_volume', 0):,}"),
-            ("Gainers / Losers", f"{summary.get('gainers','—')} / {summary.get('losers','—')}"),
-            ("Avg % Change",     f"{summary.get('avg_change', 0.0):+.2f}%"),
-        ]:
-            kpi_rows += (
-                f'<tr><td style="padding:9px 18px;color:#555;font-size:13px;'
-                f'border-bottom:1px solid #e8ecf0;">{label}</td>'
-                f'<td style="padding:9px 18px;font-weight:600;color:#1A3A5C;font-size:13px;'
-                f'text-align:right;border-bottom:1px solid #e8ecf0;">{value}</td></tr>'
-            )
+    return f"""<!DOCTYPE html>
+<html>
+<body style="margin:0;background:#F0F4F8;font-family:'Segoe UI',Arial,sans-serif;">
+  <table width="100%" style="padding:32px 16px;">
+    <tr><td align="center">
+      <table width="600" style="background:#fff;border-radius:10px;
+             box-shadow:0 2px 12px rgba(0,0,0,.1);overflow:hidden;">
 
-    kpi_block = f"""
-    <h3 style="color:#1565C0;font-size:14px;margin:28px 0 8px;">Session Highlights</h3>
-    <table width="100%" style="border:1px solid #D6E4F0;border-radius:6px;
-           border-collapse:collapse;background:#F8FBFF;">
-      <thead><tr style="background:#1565C0;">
-        <th style="padding:10px 18px;color:white;font-size:12px;text-align:left;">Metric</th>
-        <th style="padding:10px 18px;color:white;font-size:12px;text-align:right;">Value</th>
-      </tr></thead>
-      <tbody>{kpi_rows}</tbody>
-    </table>""" if kpi_rows else ""
+        <!-- Header -->
+        <tr>
+          <td style="background:#1565c0;padding:24px 32px;">
+            <h2 style="margin:0;color:#fff;font-size:20px;">
+              NEPSE Daily Report
+            </h2>
+          </td>
+        </tr>
 
-    return f"""<!DOCTYPE html><html><body style="margin:0;background:#F0F4F8;
-font-family:'Segoe UI',Arial,sans-serif;">
-<table width="100%" style="padding:32px 16px;"><tr><td align="center">
-<table width="600" style="background:#fff;border-radius:10px;
-       box-shadow:0 2px 12px rgba(0,0,0,.1);overflow:hidden;">
-  <tr><td style="background:linear-gradient(135deg,#0d1b2a,#1565c0);padding:28px 32px;">
-    <h2 style="margin:0;color:#29b6f6;font-size:22px;">&#128200; NEPSE Daily Market Report</h2>
-    <p style="margin:6px 0 0;color:#90caf9;font-size:13px;">{today} &middot; Generated {gen_time}</p>
-  </td></tr>
-  <tr><td style="padding:28px 32px;">
-    <p style="color:#333;font-size:14px;line-height:1.7;margin:0 0 20px;">
-      Your NEPSE daily market report is ready and attached as a PDF.</p>
-    {kpi_block}
-    <table width="100%" style="margin-top:24px;border:1px solid #E0E7EF;
-           border-radius:8px;background:#F8FBFF;">
-      <tr>
-        <td style="padding:14px 16px;font-size:22px;width:44px;">&#128206;</td>
-        <td style="padding:14px 8px;">
-          <p style="margin:0;color:#1A1A2E;font-size:13px;font-weight:600;">{pdf_path.name}</p>
-          <p style="margin:3px 0 0;color:#888;font-size:12px;">PDF &middot; {size}</p>
-        </td>
-      </tr>
-    </table>
-  </td></tr>
-  <tr><td style="background:#F4F6FA;padding:16px 32px;border-top:1px solid #E8ECF4;">
-    <p style="margin:0;color:#999;font-size:11px;text-align:center;">
-      Data: merolagani.com &middot; NEPSE ETL Pipeline &middot; Informational use only.</p>
-  </td></tr>
-</table></td></tr></table></body></html>"""
+        <!-- Body -->
+        <tr>
+          <td style="padding:32px;text-align:center;">
+            <p style="font-size:16px;color:#333;margin:0 0 10px;">
+              📄 Your report for
+            </p>
 
+            <p style="font-size:20px;font-weight:600;color:#1565c0;margin:0;">
+              {today}
+            </p>
+
+            <p style="font-size:14px;color:#666;margin-top:20px;">
+              Generated at {gen_time}
+            </p>
+
+            <p style="margin-top:25px;font-size:15px;color:#333;">
+              The report is attached as a PDF.
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>"""
 
 def _plain_body(pdf_path: Path, summary: dict | None) -> str:
-    lines = [
-        "NEPSE ETL Analytics Report", "=" * 40,
-        f"Generated : {datetime.now(NPT).strftime('%A, %d %B %Y  %H:%M NPT')}",
-        f"Attachment: {pdf_path.name}", "",
-    ]
-    if summary:
-        lines += [
-            "Session Highlights", "-" * 22,
-            f"  Symbols  : {summary.get('n_symbols','—')}",
-            f"  Volume   : {summary.get('total_volume',0):,}",
-            f"  G/L      : {summary.get('gainers','—')} / {summary.get('losers','—')}",
-            f"  Avg Chg  : {summary.get('avg_change',0.0):+.2f}%", "",
-        ]
-    lines += ["See attached PDF for the full report.",
-              "—", "NEPSE ETL Pipeline | merolagani.com | Informational use only."]
-    return "\n".join(lines)
+    today = datetime.now(NPT).strftime("%A, %d %B %Y")
+    gen_time = datetime.now(NPT).strftime("%H:%M NPT")
+
+    return "\n".join([
+        "NEPSE Daily Market Report",
+        "=" * 35,
+        "",
+        f"Report Date : {today}",
+        f"Generated   : {gen_time}",
+        "",
+        "Today's NEPSE report is attached as a PDF.",
+        "",
+        f"Attachment  : {pdf_path.name}",
+        "",
+        "—",
+        "NEPSE ETL Pipeline | merolagani.com | Informational use only."
+    ])
 
 
 def send_report(
@@ -216,22 +197,29 @@ def send_report(
     msg.attach(part)
 
     try:
-        log.info(f"Sending email to {', '.join(to_list)} …")
-        with smtplib.SMTP(EMAIL_SMTP_HOST, EMAIL_SMTP_PORT, timeout=30) as s:
-            s.ehlo(); s.starttls(context=ssl.create_default_context()); s.ehlo()
+        log.info(f"Connecting to SMTP server {EMAIL_SMTP_HOST}:{EMAIL_SMTP_PORT} …")
+        log.info(f"Sending email to {', '.join(to_list + cc_list)} …")
+
+        with smtplib.SMTP(EMAIL_SMTP_HOST, EMAIL_SMTP_PORT, timeout=60) as s:
+            s.ehlo()
+            s.starttls(context=ssl.create_default_context())  # STARTTLS
+            s.ehlo()
             s.login(EMAIL_SENDER, EMAIL_PASSWORD)
             s.sendmail(EMAIL_SENDER, to_list + cc_list, msg.as_string())
-        log.info("Email sent.")
+
+        log.info("Email sent successfully.")
         return True
+
     except smtplib.SMTPAuthenticationError:
-        log.error("Auth failed — use a Gmail App Password, not your main password.")
+        log.error("Auth failed — use correct credentials or App Password.")
     except smtplib.SMTPRecipientsRefused as e:
         log.error(f"Recipients refused: {e}")
-    except (smtplib.SMTPConnectError, socket.timeout) as e:
+    except (smtplib.SMTPConnectError, socket.timeout, smtplib.SMTPServerDisconnected) as e:
         log.error(f"Connection error: {e}")
     except Exception as e:
         log.error(f"Email failed: {e}", exc_info=True)
     return False
+
 
 
 # ── CLI test ───────────────────────────────────────────────────────────────────
@@ -244,3 +232,5 @@ if __name__ == "__main__":
     else:
         notify("NEPSE ETL — Test", "Desktop notifications are working!")
         print("Notification fired. Check your desktop.")
+
+        
